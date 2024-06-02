@@ -1,0 +1,33 @@
+body {
+	margin: 2%;
+	font-family: Verdana, Arial, sans-serif;
+}
+
+h1 {
+	font-size: 2.5em;
+	margin-left: 5%;
+}
+
+form {
+	
+}
+
+label{
+	display: inline-block;
+	float:left;
+	clear:left;
+	text-align: right;
+	width: 175px;
+}
+
+input {
+	display: inline-block;
+	float: left;
+	margin-left: 5px;
+}
+
+#submit {
+	clear: both;
+	margin-left: 80px;
+}
+

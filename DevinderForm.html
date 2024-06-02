@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+  Devinder Randhawa, 02/11/2024, Module 7 Assignment  
+  DevinderForm.html that creates a form to prompt the user to enter seven different fields of data,
+  using a minimum of four different data type entries. Upon submission, it verifies the fields and 
+  displays the entered data or an error message if any field is missing or incorrectly entered.
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevinderForm HTML</title>
+</head>
+<body bgcolor="#d9f2e6">
+    <center>
+    <h1>Customer Biodata Form</h1>
+
+    <?php
+    // Define variables and set to empty values
+    $fnameErr = $mnameErr = $lnameErr = $birthdayErr = $phoneErr = $textareaErr = $emailErr = "";
+    $fname = $mname = $lname = $birthday = $phone = $textarea = $email = "";
+
+    try {
+        // Retrieve form data
+        $fname = $_POST["fname"];
+        
+        // Validate and display first name
+        if($fname == null) {
+            print("<br><br>Please Enter Your First Name");
+        }
+        else {
+            print("<br><br>First Name: $fname<br />");
+        }
+
+        $mname = $_POST["mname"];
+        
+        // Validate and display middle name
+        if($mname == null) {
+            print("<br><br>Please Enter Your Middle Name");
+        }
+        else {
+            print("<br><br>Middle Name: $mname");
+        }
+
+        $lname = $_POST["lname"];
+        
+        // Validate and display last name
+        if($lname == null) {
+            print("<br><br>Please Enter Your Last Name.");
+        }
+        else {
+            print("<br><br>Last Name: $lname");
+        }
+
+        $birthday = $_POST["birthday"];
+        
+        // Validate and display birthday
+        if($birthday == null) {
+            print("<br><br>Please Enter Your Birthday");
+        }
+        else {
+            print("<br><br>Birthday: $birthday");
+        }
+
+        $phone = $_POST["phone"];
+        
+        // Validate and display phone number
+        if($phone == null) {
+            print("<br><br>Please Enter Your Phone Number");
+        }
+        else {
+            print("<br><br>Phone: $phone");
+        }
+
+        $textarea = $_POST["textarea"];
+        
+        // Validate and display address
+        if($textarea == null) {
+            print("<br><br>Please Enter Your Address");
+        }
+        else {
+            print("<br><br>Address: $textarea");
+        }
+
+        $email = $_POST["email"];
+        
+        // Validate and display email address
+        if($email == null) {
+            print("<br><br>Please Enter Your Email Address");
+        }
+        else {
+            print("<br><br>Email: $email");
+        }
+    }
+    catch(Exception $e) {
+    
+        // Error handling
+        print("<h1>oops something went wrong</h1>");
+    }
+    ?>
+    </center>
+</body>
+</html>
